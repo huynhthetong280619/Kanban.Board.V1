@@ -7,7 +7,7 @@ const getUsers = users => {
   return users.ids;
 };
 
-const createUserSelector = createSelector(state => state.users, getUsers);
+const createUserSelector = createSelector(state => state.userReducer, getUsers);
 const mapStateToProps = state => {
   return {
     users: createUserSelector(state),

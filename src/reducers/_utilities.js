@@ -16,7 +16,10 @@ export const addEntity = (state, entity, id) => {
 };
 
 export const removeEntity = (state, id) => {
-  return pipe(omit(`Entities.${id}`), set('ids', removeFromArray(state, id)));
+  return pipe(
+    omit(`Entities.${id}`),
+    set('ids', removeFromArray(state.ids, id)),
+  )(state);
 };
 
 export const addIdToChildren = (state, entityId, property, childId) => {

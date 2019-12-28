@@ -6,12 +6,9 @@ import {
   removeEntity,
 } from './_utilities';
 
-const CARD_CREATE = 'CARD_CREATE';
-const CARD_DELETE = 'CARD_DELETE';
-const CARD_MOVE = 'CARD_MOVE';
+import { LIST_CREATE, LIST_DELETE } from '../actions/list-actions';
+import { CARD_CREATE, CARD_DELETE, CARD_MOVE } from '../actions/card-actions';
 
-const LIST_CREATE = 'LIST_CREATE';
-const LIST_DELETE = 'LIST_DELETE';
 // set(chainOfProperties, what you want to replace, the object)
 
 const listReducer = (lists = defaultLists, action) => {
@@ -40,8 +37,7 @@ const listReducer = (lists = defaultLists, action) => {
   }
 
   if (action.type === LIST_DELETE) {
-    const { listId } = action.type;
-
+    const { listId } = action.payload;
     return removeEntity(lists, listId);
   }
 

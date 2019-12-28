@@ -16,6 +16,6 @@ export const createUser = userData => {
 
   return {
     type: USER_CREATE,
-    payload: { user },
+    payload: { user, userId },
   };
 };

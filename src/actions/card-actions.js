@@ -5,7 +5,7 @@ export const CARD_DELETE = 'CARD_DELETE';
 const defaultCardData = {
   title: '',
   description: '',
-  //   assignedTo: '',
+  assignedTo: '',
 };
 
 export const createCard = (listId, cardData) => {

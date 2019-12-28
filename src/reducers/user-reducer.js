@@ -6,7 +6,7 @@ const userReducer = (users = defaultUsers, action) => {
   if (action.type === USER_CREATE) {
     const { user, userId } = action.payload;
 
-    return addEntity(user, userId);
+    return addEntity(users, user, userId);
   }
 
   return users;
