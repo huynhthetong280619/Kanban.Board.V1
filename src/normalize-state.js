@@ -8,8 +8,6 @@ const list = new schema.Entity('lists', {
   cards: [card],
 });
 
-console.log(`-----------------------💯-----------------------`);
-
 const normalizedLists = normalize(defaultState.lists, [list]);
 const normalizedUsers = normalize(defaultState.users, [user]);
 

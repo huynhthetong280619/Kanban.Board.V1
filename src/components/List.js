@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardContainer from '../containers/CardContainer';
+import CardContainer from '../containers/CardsContainer';
 import CreateCardContainer from '../containers/CreateCardContainer';
 
 const List = ({ list = {}, removeList }) => {
